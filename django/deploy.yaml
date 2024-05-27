@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: todoapp
-          image: nikhil3267/todoapp:45
+          image: nikhil3267/todoapp:46
           ports:
             - containerPort: 8000 # Port your application is listening on
