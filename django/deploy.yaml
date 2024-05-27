@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todoapp
+spec:
+  replicas: 3 # Number of replicas you want to run
+  selector:
+    matchLabels:
+      app: todoapp
+  template:
+    metadata:
+      labels:
+        app: todoapp
+    spec:
+      containers:
+        - name: todoapp
+          image: nikhil3267/todoapp:replaceImageTag # Your Docker image name and tag
+          ports:
+            - containerPort: 8000 # Port your application is listening on
